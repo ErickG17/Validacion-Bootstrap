@@ -1,0 +1,27 @@
+
+header{
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+label{
+    text-align: end;
+}
+#check{
+    margin-top: 1.6%;
+}
+#formulario{
+    padding: 4%;
+}
+.boton{
+    display: inline;
+}
+#botones{
+    margin-top: 120px;
+}
+#cancelar{
+    float: right;"
+}
+#datos{
+    margin-left: 4%;
+    margin-right: 4%;
+}

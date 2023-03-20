@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/micss.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="text-center">
+        <h1>Registro de producto</h1>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8 align-self-center">
+                    <form id="formulario" class="border border-3 border-secondary rounded-4 needs-validation" novalidate>
+
+                        <div id="datos">
+                            <div class="mb-3 row position-relative">
+                                <label for="nombre" class="col-sm-3 form-label">C&oacute;digo:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="nombre" required>
+                                    <div class="invalid-tooltip">Complete los datos</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row position-relative">
+                                <label for="validationDefault01"
+                                    class="col-sm-3 col-form-label">Descripci&oacute;n:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="validationDefault01" required>
+                                    <div class="invalid-tooltip">Complete los datos</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row position-relative">
+                                <label for="validationDefault01" class="col-sm-3 col-form-label">C&oacute;digo de
+                                    barra:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="validationDefault01" required>
+                                    <div class="invalid-tooltip">Complete los datos</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row position-relative">
+                                <label for="validationDefault01" class="col-sm-3 col-form-label">Precio
+                                    unitario:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="validationDefault01" required>
+                                    <div class="invalid-tooltip">Complete los datos</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row position-relative">
+                                <label for="validationDefault01" class="col-sm-3 col-form-label">Stock:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="validationDefault01" required>
+                                    <div class="invalid-tooltip">Complete los datos</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row position-relative">
+                                <label for="validationDefault01" class="col-sm-3 col-form-label">Proveedor:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="validationDefault01" required>
+                                    <div class="invalid-tooltip">Complete los datos</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row position-relative">
+                                <label for="invalidCheck2" class="col-sm-3 form-check-label">Estado:</label>
+                                <div class="col-sm-9">
+                                    <input type="checkbox" class="form-check-input" value="" id="invalidCheck2" required>
+                                    <div class="invalid-tooltip">Marque la casilla</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row position-relative">
+                                <label for="validationDefault01"
+                                    class="col-sm-3 col-form-label">Categor&iacute;a:</label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" aria-label="Default select example"
+                                        id="validationDefault01" required>
+                                        <option selected disabled value=""></option>
+                                        <option value="1">Categoria 1</option>
+                                        <option value="2">Categoria 2</option>
+                                        <option value="3">Categoria 3</option>
+                                        <option value="3">Categoria 4</option>
+                                    </select>
+                                    <div class="invalid-tooltip">Complete los datos</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="botones">
+                            <div class="boton">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                            <div id="cancelar" class="boton">
+                                <button class="btn btn-primary" type="button" disabled>Cancelar</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+
+        (() => {
+            'use strict'
+
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }else{
+                        alert('Los datos se guardaron exitosamente.')
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>
